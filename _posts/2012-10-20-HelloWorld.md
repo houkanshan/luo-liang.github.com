@@ -5,7 +5,7 @@ layout: post
 tags:
     - hello
 categories:
-    - firstPage
+    - Living
 ---
 
 #Hello World!

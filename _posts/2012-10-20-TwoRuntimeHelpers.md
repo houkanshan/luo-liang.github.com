@@ -3,10 +3,11 @@ date: 2012-10-20 21:10:03
 title: Two runtime helpers for .NET
 layout: post
 tags:
-    - Marshal and CLS-Compliance
+    - MS.NET
 categories:
-    - .NET
+    - Developing
 ---
+
 #Runtime helpers for .NET Types
 Two runtime helpers for .NET developers that handles the problem of
 
