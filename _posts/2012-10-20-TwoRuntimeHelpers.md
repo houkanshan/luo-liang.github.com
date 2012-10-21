@@ -21,7 +21,7 @@ We will need this type to do the checking when we are about to breach CLR Securi
 * Derived from System.ValueType
 * Contains only **Unmanaged type** in any level of nesting.
 
-The code is a part of my prototypical marshaler implementation, (that implementation was submitted to Microsoft few weeks ago when I was still there). 
+The code is a part of my prototypical marshaler implementation.
 
 
 	public static class UnmanagedTypeHelper
@@ -89,7 +89,7 @@ The code is a part of my prototypical marshaler implementation, (that implementa
         }
     }
 
-We don't need to consider circular reference of structures, since we're doing a runtime check not a compile time check, that kind of problem will be elminated by the `csc.exe` itself.
+We don't need to consider circular reference of structures. Since we're doing a runtime check not a compile time check, that kind of problem will be elminated by the `csc.exe` itself.
 
 ##Exposing only CLS-Compliant-Named types in the assembly
 
@@ -137,7 +137,7 @@ This type is also farily straight forward:
         }
     }
 
-I just got to know this when I was implementing my SmartIP system services, where I used a Native Windows WiFi API Wrapper class called `nativewifi.dll` by another developer. Since all my process is done with Windows Powershell, I have to load that dll to access features like SSID, that dll is not originally CLS-Compliant and needs code refactoring to make it so.
+I just got to know this when I was implementing my SmartIP system services, where I used a Native Windows WiFi API Wrapper class called `nativewifi.dll` by another developer. Since all my process is done with Windows Powershell, I have to load that dll to access features like SSID. That dll is not originally CLS-Compliant and needs code refactoring to make it so.
 
 In case you need to take a look [http://managedwifi.codeplex.com/](http://managedwifi.codeplex.com/ "Managed Wifi API")
 
