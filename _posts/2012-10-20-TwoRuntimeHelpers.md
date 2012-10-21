@@ -1,4 +1,4 @@
-﻿---
+---
 date: 2012-10-20 21:10:03
 title: Two runtime helpers for .NET
 layout: post
@@ -95,7 +95,7 @@ We don't need to consider circular reference of structures, since we're doing a 
 
 The .NET Framework is never about a single language, it's about the whole ecosystem. The CLR is able to handle the casing problems like two different properties can only be differentiated by their casing. Some script language, however, can not.
 
-In particularly, the Microsoft®PowerShell® is one example of that kind of environment that forces the compliance of CLS.
+In particularly, the Microsoft?PowerShell? is one example of that kind of environment that forces the compliance of CLS.
 
 An `InvalidOperationException` will be thrown by the runtime if any attempt is made to access a property that can only be distinguished with another property within a same class or structure definition by casing.
 
