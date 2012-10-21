@@ -6,8 +6,6 @@ tags:
     - hello
 categories:
     - firstPage
-languages:
-	- En-us
 ---
 
 #Hello World!
