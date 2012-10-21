@@ -1,11 +1,11 @@
 ---
-date: 2012-10-20 21:10:03
-title: Two runtime helpers for NET
+date: 2012-10-20 21:55:03
+title: 2 MSNET Runtime Type Helpers!
 layout: post
 tags:
     - MSNET
 categories:
-    - Developing
+    - Dev
 ---
 
 #Runtime helpers for .NET Types
