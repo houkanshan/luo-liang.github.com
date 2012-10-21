@@ -2,4 +2,4 @@
 Luo Liang's homepage
 
 
-[www.liagnluo.net](www.liagnluo.net)
+[www.liangluo.net](www.liangluo.net)
