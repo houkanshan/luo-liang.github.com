@@ -1,9 +1,9 @@
 ---
 date: 2012-10-20 21:10:03
-title: Two runtime helpers for .NET
+title: Two runtime helpers for NET
 layout: post
 tags:
-    - MS.NET
+    - MSNET
 categories:
     - Developing
 ---
