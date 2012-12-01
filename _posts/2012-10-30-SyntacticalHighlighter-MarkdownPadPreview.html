@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>2012-10-30-SyntacticalHighlighter.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+    margin: 0 auto;
+    font-family: Georgia, Palatino, serif;
+    color: #444444;
+    line-height: 1;
+    max-width: 960px;
+    padding: 5px;
+}
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 16px;
+    padding: 0;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+    font-size: 22px;
+    margin: 20px 0 6px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    color: purple;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+    margin-left: 44px;
+}
+li ul, li ul {
+    margin-left: 24px;
+}
+p, ul, ol {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 540px;
+}
+pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {  
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 540px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+  display: inline-block;
+  width: 210px;
+  padding: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+select, input[type=file] {
+  height: 27px;
+  line-height: 27px;
+}
+textarea {
+  height: auto;
+}
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #004b9a;
+  border-bottom-color: #003f81;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  color: #fff;
+  background-position: 0 -15px;
+  text-decoration: none;
+}
+button:active {
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* CSS stylesheet is based on Kevin Burke's Markdown.css project (http://kevinburke.bitbucket.org/markdowncss) */
+</style>
+</head>
+<body>
+<hr />
+
+<p>date: 2012-10-30 14:53:20
+title: Smart highlighter
+layout: post
+tags:
+    - SILVERLIGHT
+categories:</p>
+
+<h2>    - Dev</h2>
+
+<h1>Syntactic Highlighter and intelliSense</h1>
+
+<h2>intelliSense and syntactic highlighting</h2>
+
+<p>One of the greatest inventions in the century in programming IDEs is, I think, the birth of intelliSense and syntactic highlighting. These aid greatly in improving the experiences of coding by </p>
+
+<ul>
+<li>letting you see the outline of document more easily, highlighted words are much like the "first of all" and "second" in our compositions.</li>
+<li>saving time when typing long long names, especially when the name is mixed with capitalized and noncapitalized letters. (But one potential drawback here is that developers (like me) are tend to be less careful in giving their variable names when working on such intelligent IDEs, and they tend to make their variables' names more like 'descriptions' rather than 'summaries', because they know, no matter how long their variable names are, intelliSense will make typing them instant. You can run Microsoft Variable-Name Rules to see how many problems are found in your document in Visual Studio to testify this (at least it was so true to me)).</li>
+</ul>
+
+<p>As more and more blog posts on programming skills appeared over the Internet, the need for the above features grow, because no one feel likes reading uncolored codes.</p>
+
+<p>Numerous solutions are developed by front-end designers, but many of them are unsatisfactory (this is definitely not to blame front-end designers, as 1) it is sometimes just impossible to do the coloring 2) there are simply too many programming languages to cover and each may have its unique grammar). Some of them only cares about <em>built in</em> keywords, others care only syntactic meaning and ignores semantic meaning and thus colors 'keyword' as 'keyword'. For example in C#, all <code>public, class, select</code> are keywords (Bold words (colored words) are surrounded by **):</p>
+
+<pre><code>**public** **class** Select
+{
+    //this is an empty **class**
+}
+</code></pre>
+
+<p>This is unfortunate, since the second <strong>class</strong> shouldn't be colored in the keyword way as it appears in comments and should be treated as a part of the comment. Others, although do provide some way of semantic processing, do not pick up newly defined symbols along the way, or picks everything along the way (Sublime Text 2). But most serious problem occurs when the document being displayed is Partial, so in this situation a highlighter has no way to understand the type of everything even when semantic processing is incorporated.</p>
+
+<h2>What about intelliSense</h2>
+
+<p>Having talked about highlighting, it's time to shift to intelliSense, and soon you will see, good intelliSense and highlighter go hand in hand with each other.</p>
+
+<p>There are generally 3 broad categories of intelliSense implementations: semantic based (Visual Studio), syntactic based (Sublime Text), or syntactic based with pattern recognitions (Visual Assist). </p>
+
+<p>To illustrate the differences among the three kinds of intelliSense, we can use the following test pattern in C#:</p>
+
+<pre><code>namespace TestHighlighter
+{
+    static class Program
+    {
+        public static class Test
+        {
+            public void TestMethod()
+            {
+                Test test = new TestHighlighter.
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>There is no syntactic problem but a semantic problem with the statement. By rules, <code>static</code> means <code>abstract</code> and <code>sealed</code> in some ways. So when typing the <code>new</code> keyword, correct intelliSense should prompt nothing as the statement is wrong. In Visual Studio, the intelliSense is blind to the <code>new TestHighlighter.</code> statement as nothing to do with <code>Test</code> prompts out, because it knows initializing a static class has no meaning. In Sublime Text 2, everything pops out, because Sublime Text 2 knows a token needs to be appended to the dot operator, but has no idea what should be appended. In Visual Assist, the <code>Test</code> comes out because VA knows <code>Test</code> is added to the program and the <code>Test test</code> statement tells it to initialize a <code>Test</code> instance, but it has no idea what the <code>static</code> keyword means.</p>
+
+<p>Generally, although works very well, semantic based intelliSense needs compiler support, and this is why this kind of intelliSense do bad in dynamic languages like JavaScript or Windows PowerShell - they don't even have a compiler but only a interpreter, and they are type-unsafe so type-inference can never be done. Besides, who would bother installing so many compilers for each language displayed on the website for the pure sake of highlighting texts?</p>
+
+<p>Highlighters go with intelliSenses - when compiler recognizes a token, it judges its type, and appends its metadata in the list, and then predicts next acceptable token. This series of action wills give UI generators enough information on what color to use to display the text and what is possible to prompt for user to choose for the next input.</p>
+
+<p>One anomaly of this is the C++/CLI, whose intelliSense has been cut due to various reasons. See <a href="http://blogs.msdn.com/b/vcblog/archive/2011/03/03/10136696.aspx" title="Here">http://blogs.msdn.com/b/vcblog/archive/2011/03/03/10136696.aspx</a>.</p>
+
+<h2>Go back to where we were</h2>
+
+<p>Having understood different problems and facts about intelliSense and code highlighting, it's time for us to give it a solution, to at least mitigate the problem of balancing implementational complexity and code readability.</p>
+
+<h2>A Silverlight based implementation</h2>
+
+<p>Reasons to choose Silverlight are:</p>
+
+<ul>
+<li>Browser unspecific and platform independent</li>
+<li>Easy to implement</li>
+<li>PC, Mobile and Web</li>
+</ul>
+
+<p>I have used very simple finite machine implementations to deal with C# code semantics, and have avoided most problems above. This implementation also allows user to add known tokens. (For example, user can tell the program that all type in <code>System</code> should be added, therefore, common types, like <code>System.DateTime</code>, will be colored). Also this parser remembers the token it has processed, and will automatically assign them proper types. So types you defined in the document will be understood by the parser and highlighter without problem.</p>
+
+<p><img src="https://d2qoxg.bay.livefilestore.com/y1pZ9J6QjnfLpcis1DKpatuxcjbh6YI2pCf8GVeceHM68dR6y9Hoo8wXiBZ3ZP7lJxTZZcaIjvfZg-JbGugIYkPOrDCs5mje0MQ/Untitled.png.jpg" alt="" /></p>
+
+<p>As before, you can always get a copy of code from my SkyDrive. But the lack of a proper interface is preventing me from porting it to web...</p>
+
+<p>Wish I will come up with one later.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
