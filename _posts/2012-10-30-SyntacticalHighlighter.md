@@ -67,7 +67,7 @@ Reasons to choose Silverlight are:
 
 I have used very simple finite machine implementations to deal with C# code semantics, and have avoided most problems above. This implementation also allows user to add known tokens. (For example, user can tell the program that all type in `System` should be added, therefore, common types, like `System.DateTime`, will be colored). Also this parser remembers the token it has processed, and will automatically assign them proper types. So types you defined in the document will be understood by the parser and highlighter without problem.
 
-![Preview](http://b.hiphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=9aa516860fb30f24319ae807f8a5ea32/b17eca8065380cd7700f1f0aa144ad34588281c0.jpg)
+[http://b.hiphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=9aa516860fb30f24319ae807f8a5ea32/b17eca8065380cd7700f1f0aa144ad34588281c0.jpg](http://b.hiphotos.baidu.com/album/s%3D1400%3Bq%3D90/sign=9aa516860fb30f24319ae807f8a5ea32/b17eca8065380cd7700f1f0aa144ad34588281c0.jpg "The preview")
 
 As before, you can always get a copy of code from my SkyDrive. But the lack of a proper interface is preventing me from porting it to web...
 
