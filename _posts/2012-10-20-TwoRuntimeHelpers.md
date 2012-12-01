@@ -24,8 +24,8 @@ We will need this type to do the checking when we are about to breach CLR Securi
 The code is a part of my prototypical marshaler implementation.
 
 
-	public static class UnmanagedTypeHelper
-	{
+    public static class UnmanagedTypeHelper
+    {
        static Type[] unManagedPrimitives = new[] 
         { 
             typeof(bool),
@@ -89,34 +89,34 @@ The code is a part of my prototypical marshaler implementation.
         }
     }
 
-We don't need to consider circular reference of structures. Since we're doing a runtime check not a compile time check, that kind of problem will be elminated by the `csc.exe` itself.
+We don't need to consider circular reference of structures. Since we're doing a runtime check not a compile time check, that kind of problem will be eliminated by the `csc.exe` itself.
 
 ##Exposing only CLS-Compliant-Named types in the assembly
 
-The .NET Framework is never about a single language, it's about the whole ecosystem. The CLR is able to handle the casing problem like when two different properties can only be differentiated by their casing. Some script language, however, can not.
+The .NET Framework is never about a single language, it's about the whole ecosystem. The CLR is able to handle the casing problem like when two different properties can only be differentiated by their casing. Some script language, however, cannot.
 
 In particular, the Microsoft?PowerShell? is one example of that kind of environment that forces the compliance of CLS.
 
 An `InvalidOperationException` will be thrown by the runtime if any attempt is made to access a property that can only be distinguished with another property within a same class or structure definition by casing.
 
-	class TestType
-	{
-		public int UppercaseMe;
-		public int upperCaseMe;
-	}
+    class TestType
+    {
+        public int UppercaseMe;
+        public int upperCaseMe;
+    }
 
-	PS C:\Users\WC> Add-Type -path D:\programs\tools\ExposeOnlyCLSCompliantTypeRule\bin\debug\ExposeOnlyCLSCompliantTypeRule.dll
-	PS C:\Users\WC> $item = New-Object ExposeOnlyCLSCompliantTypeRule.TestType
-	PS C:\Users\WC> $Item.uppercaseMe = 1
-	-------------------------------------
-	**InvalidOperationException - Failed to use non CLS Compliant type.**
+    PS C:\Users\WC> Add-Type -path D:\programs\tools\ExposeOnlyCLSCompliantTypeRule\bin\debug\ExposeOnlyCLSCompliantTypeRule.dll
+    PS C:\Users\WC> $item = New-Object ExposeOnlyCLSCompliantTypeRule.TestType
+    PS C:\Users\WC> $Item.uppercaseMe = 1
+    -------------------------------------
+    **InvalidOperationException - Failed to use non CLS Compliant type.**
 
 
 It seems none of the Microsoft Code Analysis rules covers this, so next time you wish to export a library, make sure to check all public types are CLS Compliant. Those who are using scripts to load your library can really be released the burden of recompiling or reflecting to access these conflicting names.
 
-This type is also farily straight forward:
+This type chcker is also fairly straight forward:
 
- 	public static class CLSComplianceHelper
+    public static class CLSComplianceHelper
     {
         public static bool IsCLSCompliant(Type type)
         {
@@ -139,10 +139,8 @@ This type is also farily straight forward:
 
 Use reflection to enumerate through all publicly exposed types using this type to enusure CLS Compliance fo the entire assembly.
 
-I just got to know this when I was implementing my SmartIP system service, where I used a Native Windows WiFi API Wrapper class called `nativewifi.dll` by another developer. Since my process is done with Windows Powershell, I have to load that dll to access features like 802.11 SSID. That dll is not originally CLS-Compliant and needs code refactoring to make it so.
+I just got to know this when I was implementing my SmartIP system service, where I used a Native Windows WiFi API Wrapper class called `nativewifi.dll` by another developer. Since my process is done with Windows PowerShell, I have to load that dll to access features like 802.11 SSID. That dll is not originally CLS-Compliant and needs code refactoring to make it so.
 
 In case you need to take a look [http://managedwifi.codeplex.com/](http://managedwifi.codeplex.com/ "Managed Wifi API")
 
 And my work done with that API [http://rrurl.cn/65wfqm](http://rrurl.cn/65wfqm)
-
-
