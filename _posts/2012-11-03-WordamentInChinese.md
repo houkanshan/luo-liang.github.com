@@ -41,9 +41,9 @@ But there is an essential difference between these 2 languages. We can think of 
 
 English has about 1 million words while Chinese has only 100K. The traditional way to use a tree to represent words in common dictionaries might no longer be applicable if we are playing with the whole set of words as it will be memory consuming.
 
-Let do a series of assumptions: 
+Let's do a series of assumptions: 
 
-- Average English word length is 5. Suppose the 1 million words are continuous, i.e., from a to xxxx, each variation in letter results in a different word(this is not the case but we can get the minimum average). So this will reduce the question of finding x that makes 26^x = 1 Million. We can easily see x is larger than 4.
+- Average English word length is 5. Suppose the 1 million words are continuous, i.e., from a to zzzzz, each variation in letter results in a different word(this is not the case but we can find the minimum average). So this will reduce the question of finding x that makes 26^x = 1 Million. We can easily see x is larger than 4 but less than 5.
 - Each tree node has 26 children, at least.
 
 - Tree has 1 million nodes in total.
