@@ -1,9 +1,9 @@
 ---
-date: 2012-11-3 14:53:20
-title: Wordament™ in Chinese PART1
+date: 2012-10-30 14:53:20
+title: Wordament in Chinese PART1
 layout: post
 tags:
-    - GAMES
+    - SILVERLIGHT
 categories:
     - Dev
 ---
