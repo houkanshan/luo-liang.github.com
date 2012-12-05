@@ -1,8 +1,8 @@
 #markdown: rdiscount 
 permalink: /:year/:month/:day/:title 
 title: Luoliang
-url: http://luoliang.net
-subscribe: http://luoliang.net/feed.xml
+url: http://www.luoliang.net
+subscribe: http://www.luoliang.net/feed.xml
 exclude: [ README.md, newpost.rb ]
 domain: luoliang.net
 author: Luo Liang
