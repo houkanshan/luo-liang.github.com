@@ -1,10 +1,10 @@
 #markdown: rdiscount 
 permalink: /:year/:month/:day/:title 
 title: Luoliang
-url: http://www.luoliang.net
-subscribe: http://www.luoliang.net/feed.xml
+url: http://www.liangluo.net
+subscribe: http://www.liangluo.net/feed.xml
 exclude: [ README.md, newpost.rb ]
-domain: luoliang.net
+domain: liangluo.net
 author: Luo Liang
 email: llmainland+blog@live.cn
 auto: true
