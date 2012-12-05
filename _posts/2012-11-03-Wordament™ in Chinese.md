@@ -3,7 +3,7 @@ date: 2012-11-3 14:53:20
 title: Wordament™ in Chinese PART1
 layout: post
 tags:
-    - GAMES,SILVERLIGHT
+    - GAMES
 categories:
     - Dev
 ---
