@@ -14,7 +14,7 @@ Two runtime helpers for .NET developers that handle the problem of
 * Determining if a given type is an unmanaged type.
 * Determining if a given type is CLS Compliant.
 
-##Unamaged type checker for fast-marshaling mechanism (see my next blog post)
+##Unmanaged type checker for fast-marshaling mechanism (see my next blog post)
 We will need this type to do the checking when we are about to breach CLR Security verification mechanisms in my upcoming posts to provide fast marshal and unmarshal. This type is pretty easy to understand as it uses recursion to check if a type is an unmanaged type. By definition, an unmanaged type is a **structure** that:
 
 * Contain only fields or properties of primitive types **Excluding System.String**
@@ -93,7 +93,7 @@ We don't need to consider circular reference of structures. Since we're doing a 
 
 ##Exposing only CLS-Compliant-Named types in the assembly
 
-The .NET Framework is never about a single language, it's about the whole ecosystem. The CLR is able to handle the casing problem like when two different properties can only be differentiated by their casing. Some script language, however, cannot.
+The .NET Framework is never about a single language, it's about the whole ecosystem. The CLR is able to handle the casing problem when two different properties can only be differentiated by their casing. Some script language, however, cannot.
 
 In particular, the Microsoft?PowerShell? is one example of that kind of environment that forces the compliance of CLS.
 
@@ -114,7 +114,7 @@ An `InvalidOperationException` will be thrown by the runtime if any attempt is m
 
 It seems none of the Microsoft Code Analysis rules covers this, so next time you wish to export a library, make sure to check all public types are CLS Compliant. Those who are using scripts to load your library can really be released the burden of recompiling or reflecting to access these conflicting names.
 
-This type chcker is also fairly straight forward:
+This type checker is also fairly straight forward:
 
     public static class CLSComplianceHelper
     {
@@ -137,7 +137,7 @@ This type chcker is also fairly straight forward:
         }
     }
 
-Use reflection to enumerate through all publicly exposed types using this type to enusure CLS Compliance fo the entire assembly.
+Use reflection to enumerate through all publicly exposed types using this type to enusure CLS Compliance of the entire assembly.
 
 I just got to know this when I was implementing my SmartIP system service, where I used a Native Windows WiFi API Wrapper class called `nativewifi.dll` by another developer. Since my process is done with Windows PowerShell, I have to load that dll to access features like 802.11 SSID. That dll is not originally CLS-Compliant and needs code refactoring to make it so.
 
