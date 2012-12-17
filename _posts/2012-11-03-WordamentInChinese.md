@@ -23,7 +23,7 @@ When the user is swiping across the screen, we should send the word to the serve
  
 - updates to dictionary is transparent
 
-but this also brings some challenges. For example, should we freeze the UI if the network connection is slow? We should probably do this because users really care about if the word they found exists, so if nothing is prompt after they have swiped across the board, they tend to keep swiping until a visual cue is displayed. And this is what the original Wordament game does, so we should probably learn from what is already a right way.
+but this also brings some challenges. For example, should we freeze the UI if the network connection is slow? We should probably do this because users really care about if the word they found exists, so if nothing is prompt after they have swiped across the board, they tend to keep swiping until a visual cue is displayed. And this is what the original Wordament game does, so we should probably learn from what is already right.
 
 The English words are made of characters. Chinese characters are made of strokes. Like English words, there are lot of common letter/strokes between 2 different characters. It is the combination of different strokes that makes lots of characters. We can learn from the famous 9-key Chinese input method on our smartphones that only 5 basic strokes are needed to "spell" all the Chinese characters. 
 
@@ -56,7 +56,7 @@ Now let's calculate the estimated memory consumption. We assume that we use nati
     
     SUM 218MBytes
     
-The real situation will be much worse, because here we assume words are continious, which means if abc exists, abcx (x belongs to a-z) exists, which is not true at all. This will be a huge waste, as huge numbers of pointers are wasted because many words simply don't exist. Also, unnecessary wastes occur because the reuse rate in English language is amazingly high.
+The real situation will be much worse, because here we assume words are continious, which means if abc exists, abcx (x belongs to a-z) exists, which is not true at all. This will be a huge waste, as huge numbers of pointers will point to null because many words simply don't exist. Also, unnecessary wastes occur because the reuse rate in English language is amazingly high.
 
     inter
     nation
