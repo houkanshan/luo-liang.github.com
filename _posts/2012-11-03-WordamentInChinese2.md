@@ -15,11 +15,15 @@ The proposed solution would have at least 2 features：On one hand, we take adva
 
 	1)Sort all words alphabetically.
 
+
 	2)Set up a gauge. If a common structure is shorter in length than the gauge, the common structure is not shared, otherwise, it is shared. To determine the exact value of the gauge, consider using the CPU architecture as a factor. If we are working on a X86, we would prefer to set gauge larger than 8; if we're working on x86, we would prefer gauge to be larger than 12. Or, the pointer size itself will offset the memory we thrifted via sharing. Now suppose we set gauge to 24.
+
 
 	3)Foreach word, maintain a linked list, within the node content of the linked list, a string field and a pointer to another node are established. This gives each linked list node 3 fields: a Next pointer, a pointer to another(unknown as of now) node, and a string filed.
 
+
 	4)List all words alphabetically whose length is less than gauge. This can be done in a simple while loop. We name this list "done list" and add the word itself to the linked list. Like this:
+
 
 	WORD 				REP
 	a					[Null,Null,"a"]
@@ -28,6 +32,7 @@ The proposed solution would have at least 2 features：On one hand, we take adva
 	anti				[NULL,Null,"anti"]
 	...
 	international		[Null,Null,"international"]
+
 
 	5)Foreach remaining word, use Matrix X Matrix (We can also use KMP)method to compare it with all the words in the done list and find the maximum common strings. Keep finding and connecting these strings until we exhaust the word. For example, when examining the word "internationalism", the word "international" should be already in the done list. Our algorithm would find the longest match would be "international". We then represent "internationalism" as:
 
