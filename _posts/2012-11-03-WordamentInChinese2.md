@@ -14,8 +14,11 @@ Last time our Wordament game left us designing an efficient dictionary index. We
 The proposed solution would have at least 2 features：On one hand, we take advantage of tree structure, sharing common structures as many as we can. On the other hand, we try best to eliminate waste.
 
 	1)Sort all words alphabetically.
+
 	2)Set up a gauge. If a common structure is shorter in length than the gauge, the common structure is not shared, otherwise, it is shared. To determine the exact value of the gauge, consider using the CPU architecture as a factor. If we are working on a X86, we would prefer to set gauge larger than 8; if we're working on x86, we would prefer gauge to be larger than 12. Or, the pointer size itself will offset the memory we thrifted via sharing. Now suppose we set gauge to 24.
+
 	3)Foreach word, maintain a linked list, within the node content of the linked list, a string field and a pointer to another node are established. This gives each linked list node 3 fields: a Next pointer, a pointer to another(unknown as of now) node, and a string filed.
+
 	4)List all words alphabetically whose length is less than gauge. This can be done in a simple while loop. We name this list "done list" and add the word itself to the linked list. Like this:
 
 	WORD 				REP
