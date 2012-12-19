@@ -1,6 +1,6 @@
 ---
 date: 2012-11-14 13:23:18
-title: Troubleshooting Windows 8 hang at Startup
+title: Troubleshooting Windows 8 freezes
 layout: post
 tags:
     - WINDOWS
@@ -13,7 +13,7 @@ The greatest change Windows 8 brought was the consistency across the screens. Se
 
 Apple users may say they were enjoying the same feature since the beginning of time, but we couldn't see MacOS and iThing share the same kernel as Windows-things do.
 
-But Windows 8 is far, far from perfect, at least now. Numerous complaints (and unfortunately it seems I have experienced all the circumstances in the complaints), ranging from installing/updating to using/maintaining are there. Here're problems related to what I have encountered and their perspective, non-official solutions (I compiled them from multiple sources, like TechNet, MSDN).
+But Windows 8 is far, far from perfect, at least not now. Numerous complaints (and unfortunately it seems I have experienced all the circumstances in the complaints), ranging from installing/updating to using/maintaining are there. Here're problems related to what I have encountered and their perspective, non-official solutions (I compiled them from multiple sources, like TechNet, MSDN).
 
 ## Windows Setup freezes at logo ##
 This is a widely-seen problem, the simplest solution you should try is to update your BIOS. If you rushed into Windows Setup without updating the BIOS, you could try to disable your SD Card slot in BIOS and run the Windows Setup again.
