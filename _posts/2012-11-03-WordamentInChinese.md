@@ -1,4 +1,4 @@
----
+﻿---
 date: 2012-11-6 17:53:10
 title: Wordament in Chinese PART1
 layout: post
@@ -48,13 +48,13 @@ Let's do a series of assumptions:
 
 - Tree has 1 million nodes in total.
 
-Now let's calculate the estimated memory consumption. We assume that we use native languages so no overhead for `class`. In this situation, each letter takes up 1byte. Again, let's assume the average tree height is 6 (plus the root), since we have an average length of 5 among the words. To assist in calculation, we make 26^5 1 million. Also, each tree nodes will have at least 2 pointers, one for an array of its 26 members, another holds the letter it represents. At last, assume we are running on X64.
+Now let's calculate the estimated memory consumption. We assume that we use native languages so no overhead for `class`. In this situation, each letter takes up 1byte. Again, let's assume the average tree height is 6 (plus the root), since we have an average length of 5 among the words. To assist in calculation, we make 26^5 1 million. At last, we assume we are using x64 and the array and string are stored within the structure itself, so no overhead for the pointer to the array of child pointers nor the string of the node.
 
     1 Million word * 5 letter/each word * 1byte/letter = 5 Million bytes = 4.76MBytes
     
-    1 Million nodes * (2 + 26) pointers/each node * 8byte/pointer = 213MBytes
+    1 Million nodes * (26) pointers/each node * 8byte/pointer = 198MBytes
     
-    SUM 218MBytes
+    SUM 203MBytes
     
 The real situation will be much worse, because here we assume words are continious, which means if abc exists, abcx (x belongs to a-z) exists, which is not true at all. This will be a huge waste, as huge numbers of pointers will point to null because many words simply don't exist. Also, unnecessary wastes occur because the reuse rate in English language is amazingly high.
 
