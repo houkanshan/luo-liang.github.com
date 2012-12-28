@@ -1,4 +1,4 @@
-﻿---
+---
 date: 2012-11-10 17:53:10
 title: Wordament in Chinese PART2
 layout: post
@@ -7,6 +7,7 @@ tags:
 categories:
     - Dev
 ---
+
 I would first love to congratulate myself on ranking in the top 23% of players in Wordament. Then, I would make a correction to an assert about Wordament's sending words found to servers to do the verification I made in Part 1 of this article. I believe this is not always the case since the best strategy would be to store part of the most common words locally to save data connection bandwidth.
 
 Last time our Wordament game left us designing an efficient dictionary index. We have analyze the inefficiency of tree structure in dealing with indexing English words.

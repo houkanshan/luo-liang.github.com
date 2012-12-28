@@ -7,6 +7,7 @@ tags:
 categories:
     - Dev
 ---
+
 #Wordament™ in Chinese PART1#
 One of the funniest games in XBOX live for me is the Wordament, where a 4x4 box of random letters are displayed. Players are asked to swipe their mouses/fingers across these letters in a correct order to reveal an English word. Each word a player find will carry some value points, and typically, the longer word you find, the higher value you'll get. At the end of each round, players from all over the world will be ranked according to their total points earned. Wordament™ automatically synthesizes the 4x4 box and sync players to challenge the same box about every 3.5 minutes. Players around the World can join in the game at any time. 
 
