@@ -16,7 +16,7 @@ Apple users may say they were enjoying the same feature since the beginning of t
 But Windows 8 is far, far from perfect, at least not now. Numerous complaints (and unfortunately it seems I have experienced all the circumstances in the complaints), ranging from installing/updating to using/maintaining are there. Here're problems related to what I have encountered and their perspective, non-official solutions (I compiled them from multiple sources, like TechNet, MSDN).
 
 ## Windows Setup freezes at logo ##
-This is a widely-seen problem, the simplest solution you should try is to update your BIOS. If you rushed into Windows Setup without updating the BIOS, you could try to disable your SD Card slot in BIOS and run the Windows Setup again.
+This is a widely-seen problem, and the simplest solution you should try is to update your BIOS. If you rushed into Windows Setup without updating the BIOS, you could try to disable your SD Card slot in BIOS and run the Windows Setup again.
 
 If that didn't work, try to set your BIOS Sata mode to AHCI. Windows 8 works great on AHCI controllers so you don't need to insert a floppy and press F6 during setup. If your BIOS Sata Mode is already set to AHCI, switch it to IDE mode. There is a possibility that your motherboard does not support AHCI. If that didn't work and your computer worked well on AHCI before, then it isn't the problem of SATA mode. Set it back to AHCI.
 
