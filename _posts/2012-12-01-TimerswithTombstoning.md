@@ -17,8 +17,8 @@ Note that tomb stoning isn't limited only to Windows Phone 7 and 8s since it als
 This looks subtle but if we think further, some interesting problems will occur. Let's first see an example of such problems.
 
     visit http://www.baidu.com using a modern Internet Explorer
-    type in 北京时间 (Beijing Time in Chinese)
-    click 百度一下
+    type in Beijing Time 
+    click go
     Observe that the first result will be a running clock showing the GMT+8 time
     Press Start Button to navigate away from modern Internet Explorer and record the displayed time in the webpage
     Wait a minute (literally)
