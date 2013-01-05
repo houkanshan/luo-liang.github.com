@@ -1,4 +1,4 @@
----
+ï»¿---
 date: 2012-12-01 17:53:10
 title: Timers with Tomb stoning
 layout: post
@@ -17,8 +17,8 @@ Note that tomb stoning isn't limited only to Windows Phone 7 and 8s since it als
 This looks subtle but if we think further, some interesting problems will occur. Let's first see an example of such problems.
 
     visit http://www.baidu.com using a modern Internet Explorer
-    type in ±±¾©Ê±¼ä (Beijing Time in Chinese)
-    click °Ù¶ÈÒ»ÏÂ
+    type in åŒ—äº¬æ—¶é—´ (Beijing Time in Chinese)
+    click ç™¾åº¦ä¸€ä¸‹
     Observe that the first result will be a running clock showing the GMT+8 time
     Press Start Button to navigate away from modern Internet Explorer and record the displayed time in the webpage
     Wait a minute (literally)
