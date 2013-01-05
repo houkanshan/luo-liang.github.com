@@ -1,4 +1,4 @@
-﻿---
+---
 date: 2012-12-01 17:53:10
 title: Timers with Tomb stoning
 layout: post
