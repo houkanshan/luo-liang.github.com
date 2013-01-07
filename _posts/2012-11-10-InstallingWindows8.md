@@ -27,18 +27,23 @@ Check your RAM and HDD for any possible corruptions/bad sectors. Run MemTest86+ 
 ## Windows freezes at logo on start ##
 This is another enthusiasm killer for Windows 8. After a good install of Windows Update or driver, the system may hang at startup, only showing the blue logo. There are many things that can contribute to this, generally, the troubleshooting steps are:
 
+- [Updated 20/11/2012]If you're running a legacy AMD processor and attempts to install Windows 8 X64, please consider installing X86, for unknown reason, Windows 8 cannot run on some legacy processors. Search MSDN Forum for more discussion about this.
+- [Updated 01/01/2013]If you're using Lenovo ThinkPad X220 i7 laptop and you have installed Lenovo Power Manager Driver (an entry called `Lenovo PM Service` will appear in the `services` if you run `MSCONFIG`), please uninstall the service from the `add or remove program` in the `control panel`.
 - Try the automatic repair. Automatic repair will automatically start if your computer failed to boot twice in a row.
-- Enter safe mode (if you can. To enter safe mode, shut down your computer repeatedly during boot and wait for the automatic recovery. In `troubleshoot` and `advanced option`, choose `start up option`) and disable all non-Microsoft services and startup items, restart and verify if the problem is solved.
+- Enter safe mode (if you can. To enter safe mode, shut down your computer repeatedly during boot and wait for the automatic recovery. Windows will attempt repair your computer and in my case this always fails. Click `cancel` if Windows prompts to start system recovery. Wait a while till another menu is shown. In `troubleshoot` and `advanced option`, choose `start up option`) and disable all non-Microsoft services and startup items, restart and verify if the problem is solved.
+- If the `Automatic Recovery` hangs, insert an installation media and continue the steps. If Setup hangs, see issue above.
 - If you can enter safe mode and that problem isn't solved, turn off Fast Start Up. To do this, choose `more power options` in power setting, in `choose what closing the lid does`, select `change settings that are unavailable`. Disable `Turn on fast start up`. `Shutdown` (Not `Restart`) and turn on your PC to verify if the problem is solved.
-- Run `MemTest86+` and `SeaTool` to verify memory and disks.
-- In many cases if the boot freezes, resetting your computer by pressing the power button will help. If this is the case, enter your Windows and update all drivers and BIOS and try the above steps. Drivers for ACPI, chipset, storage system are crucial, make sure they are updated.
+- Run `MemTest86+` and `SeaTool` to verify memory and disks. 
+- In many cases if the boot freezes, resetting your computer by pressing the power button will help. If this is the case, enter your Windows and update all drivers and BIOS and try the above steps. Drivers for Power Management(ACPI), chipset, storage system are crucial, make sure they are updated.
 - Check `event log` to see what happened/what problems occurred during boot.
 - Disable Hyper-V and intel VT-d. Hyper-V and intel Virtualization Direct IO may be the cause. In your BIOS, disable them and verify if the problem is gone.
 - Run `sfc /scannow` to verify that Windows System files are not tampered.
-- If you eager to log into Windows, try a system restore and usually that will help.
+- If you eager to log into Windows, try a system restore and usually that will help. When Windows is recovered, start the investigation of failure reasons.
+- [Updated 01/01/2013]Disable processor power management(SpeedStep, Turbo Boost)/PCI-E power management in BIOS and verify if the problem is gone. Revert the settings if this didn't help.
 - Do a clean installation of Windows 8, if you haven't given up by now.
-- If you still cannot fix it, then it might be a problem with your computer or Windows 8. Live with the problem and constantly check for new updates. Do remember to voice in MSDN Forum so Microsoft will pay attention to this problem and collaborate with vendors to deal with it.
+- If you still cannot fix it, then it might be a internal problem with your computer or Windows 8. Live with the problem and constantly check for new updates. Do remember to voice in MSDN Forum so Microsoft will pay attention to this problem and collaborate with vendors to deal with it.
 
 Note if you have more than 1 memory sticks in the slots, make sure you check them one by one. In some models, Windows Memory Diagnostics wouldn't run if your computer has multiple sticks.
 
+My personal (only personal) conclusion about this is that there is something incompatible with the computer's power management and the OS's power management.
 I will keep updating this post if I'm experiencing more problems.
