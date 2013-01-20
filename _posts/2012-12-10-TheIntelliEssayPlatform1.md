@@ -26,7 +26,7 @@ categories:
 
 - intelliEssay语言包，我们称之为intelliEssay.Graphics.Shell.*LANGUAGENAME*.dll，这些语言包会被放在root\langPacks下，载intelliEssay图形界面加载的过程中，会动态加载这些语言包。
 
-- intelliSys OpenXml敏捷包，我们称之为IntelliSys.Agility.Openxml.dll，这个类库包含了存取OpenXml有关类型的统一接口。例如，可以快速存取一个诸如Space的Value内容。而使用正常的流程，要访问Space.Val.Value，需要首先对Space检查Null，再对Val检查Null，然后再存取Value。而是用bool ValHelper.TryGetValue<T>(object o, out T value)泛型，则可以对任何类型的o进行此类工作，若读取成功，结果就出现在Value中。
+- intelliSys OpenXml敏捷包，我们称之为IntelliSys.Agility.Openxml.dll，这个类库包含了存取OpenXml有关类型的统一接口。例如，可以快速存取一个诸如Space的Value内容。而使用正常的流程，要访问Space.Val.Value，需要首先对Space检查Null，再对Val检查Null，然后再存取Value。而是用`bool ValHelper.TryGetValue<T>(object o, out T value)`泛型，则可以对任何类型的o进行此类工作，若读取成功，结果就出现在Value中。
 
 - 其他废弃的内容。在intelliEssay开发转向CodePlex平台之前，intelliEssay用自己的工具协助金山快盘同步代码。intelliEssayHelpAgent用于负责生成intelliEssay代码帮助文档、团队通知、同步代码、链接库注册。intelliEssay.ApplicationExceptionReportingRecordingRedistributing.*命名空间用于跟踪intelliEssay运行时错误，根据链接库注册的签名通知intelliEssayBugCheck程序指派给特定的程序员并进行邮件通知。
 
