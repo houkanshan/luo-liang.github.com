@@ -1,4 +1,4 @@
-﻿---
+---
 date: 2012-12-10 18:23:07
 title: 使用intelliEssay平台1
 layout: post
