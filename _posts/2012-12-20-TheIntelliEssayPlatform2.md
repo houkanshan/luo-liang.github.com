@@ -1,11 +1,11 @@
 ﻿---
-date: 2012-12-20 09:24:31
+date: 2012-12-20 18:23:07
 title: 使用intelliEssay平台[2]
 layout: post
 tags:
     - intelliEssay
 categories:
-    - dev
+    - Dev
 ---
 
 哈喽大家好.上次简单介绍了一下intelliEssay的核心组件.这次由于新的intelliEssay界面诞生,就介绍一下如何在新的界面上进行开发、调试您的检查器.
