@@ -1,6 +1,6 @@
 ﻿---
 date: 2012-12-20 18:23:07
-title: 使用intelliEssay平台[2]
+title: 使用intelliEssay平台2
 layout: post
 tags:
     - intelliEssay
