@@ -8,6 +8,8 @@ categories:
     - Dev
 ---
 
+
+
 哈喽大家好.上次简单介绍了一下intelliEssay的核心组件.这次由于新的intelliEssay界面诞生,就介绍一下如何在新的界面上进行开发、调试您的检查器.
 
 首先向新的intelliEssay Loader问好！如果你的CPU足够慢,就可以看到许多细微动画噢.
