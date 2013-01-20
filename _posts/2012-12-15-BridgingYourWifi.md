@@ -24,27 +24,27 @@ The following is my test result:
 
 	WR941N	192.168.1.1		Enabled		100-199		802.11N		Router	TP-LINK_EC4818	11
 
-	WR700N	192.168.1.253	Enabled		002-050		802.11N		Bridge	TP_LINK_EC4818	6
+	WR700N	192.168.1.253		Enabled		002-050		802.11N		Bridge	TP_LINK_EC4818	6
 
 	TEST RESULTS 	1
 	
 	DeviceName							Roaming		NetwortUsability	Description
 
-	ThinkPad Tablet (Android 4.0)		Failed		Usable				Cannot roam, connects to only one AP (the WR941N) regardless of signal strength.
+	ThinkPad Tablet (Android 4.0)					Failed		Usable			Cannot roam, connects to only one AP (the WR941N) regardless of signal strength.
 
-	Kindle Fire							Failed		Not Usable			The Kindle Fire network module crashes, as the WIFI settings become unavailable.
+	Kindle Fire							Failed		Not Usable		The Kindle Fire network module crashes, as the WIFI settings become unavailable.
 
-	ThinkPad X220 (Windows 8)			Failed		Usable				Can connect, but failed when roaming - network is limited when roaming, but configurations are all right.
+	ThinkPad X220 (Windows 8)					Failed		Usable			Can connect, but failed when roaming - network is limited when roaming, but configurations are all right.
 
-	Surface (Windows RT)				Failed		Usable				The same as Windows 8.
+	Surface (Windows RT)						Failed		Usable			The same as Windows 8.
 
-	iPad 2 (IOS 5)						Failed		Usable				The same as Windows 8
+	iPad 2 (IOS 5)							Failed		Usable			The same as Windows 8
 
-	HTC 7 Mozart(Windows Phone)			Failed 		Usable 				The same as Windows 8
+	HTC 7 Mozart(Windows Phone)					Failed 		Usable 			The same as Windows 8
 
-	Sony X10 Mini(Android 2.2)			- 			-					Not tested, because this setting cannot meet my needs.
+	Sony X10 Mini(Android 2.2)			- 			-				Not tested, because this setting cannot meet my needs.
 
-	Nokia C6-00(Symbian S60 V5)			-			-					Not tested, because this setting cannot meet my needs.
+	Nokia C6-00(Symbian S60 V5)			-			-				Not tested, because this setting cannot meet my needs.
 
 
 
@@ -56,27 +56,27 @@ The following is my test result:
 
 	WR941N	192.168.1.1		Enabled		100-199		802.11N		Router	TP-LINK_EC4818	11
 
-	WR700N	192.168.1.253	Disabled	-			802.11N		RepeaterTP_LINK_EC4818	11
+	WR700N	192.168.1.253		Disabled	-		802.11N		RepeaterTP_LINK_EC4818	11
 	
 	TEST RESULTS 	2
 	
 	DeviceName							Roaming		NetwortUsability	Description
 
-	ThinkPad Tablet (Android 4.0)		Success		Not Usbale			Can connect to different APs, but cannot assign properly the network addresses.
+	ThinkPad Tablet (Android 4.0)					Success		Not Usbale		Can connect to different APs, but cannot assign properly the network addresses.
 
-	Kindle Fire							Failed		Not Usable			Same as ThinkPad Tablet.
+	Kindle Fire							Failed		Not Usable		Same as ThinkPad Tablet.
 
-	ThinkPad X220 (Windows 8)			Success		Usable				Can connect, and can roam properly. The Windows 8 will auotmatically get IP config information from 192.168.1.1
+	ThinkPad X220 (Windows 8)					Success		Usable			Can connect, and can roam properly. The Windows 8 will auotmatically get IP config information from 192.168.1.1
+		
+	Surface (Windows RT)						Failed		Usable			The same as Windows 8.
 
-	Surface (Windows RT)				Failed		Usable				The same as Windows 8.
+	iPad 2 (IOS 5)							Success		Not Usbale		Same as ThinkPad Tablet.
 
-	iPad 2 (IOS 5)						Success		Not Usbale			Same as ThinkPad Tablet.
+	HTC 7 Mozart(Windows Phone)					Success		Not Usbale		Same as ThinkPad Tablet.
 
-	HTC 7 Mozart(Windows Phone)			Success		Not Usbale			Same as ThinkPad Tablet.
+	Sony X10 Mini(Android 2.2)			- 			-				Not tested, because this setting cannot meet my needs.
 
-	Sony X10 Mini(Android 2.2)			- 			-					Not tested, because this setting cannot meet my needs.
-
-	Nokia C6-00(Symbian S60 V5)			-			-					Not tested, because this setting cannot meet my needs.
+	Nokia C6-00(Symbian S60 V5)			-			-				Not tested, because this setting cannot meet my needs.
 	
 
 
@@ -88,26 +88,26 @@ The following is my test result:
 
 	WR941N	192.168.1.1		Enabled		100-199		802.11N		Router	TP-LINK_EC4818	11
 
-	WR700N	192.168.1.253	Enabled		002-050		802.11N		RepeaterTP_LINK_EC4818	11
+	WR700N	192.168.1.253		Enabled		002-050		802.11N		RepeaterTP_LINK_EC4818	11
 	
 	TEST RESULTS 	3 
 	
 	DeviceName							Roaming		NetwortUsability	
 
-	ThinkPad Tablet (Android 4.0)		Success		Usable			
+	ThinkPad Tablet (Android 4.0)					Success		Usable			
 
 	Kindle Fire							Success		Usable			
 
-	ThinkPad X220 (Windows 8)			Success		Usable				
+	ThinkPad X220 (Windows 8)					Success		Usable				
 
-	Surface (Windows RT)				Success		Usable				
+	Surface (Windows RT)						Success		Usable				
 
-	iPad 2 (IOS 5)						Success		Usable			
+	iPad 2 (IOS 5)							Success		Usable			
 
-	HTC 7 Mozart(Windows Phone)			Success		Usable			
+	HTC 7 Mozart(Windows Phone)					Success		Usable			
 
-	Sony X10 Mini(Android 2.2)			Success		Usable				
+	Sony X10 Mini(Android 2.2)					Success		Usable				
 
-	Nokia C6-00(Symbian S60 V5)			Success		Usable			
+	Nokia C6-00(Symbian S60 V5)					Success		Usable			
 
 
