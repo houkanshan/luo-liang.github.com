@@ -45,7 +45,7 @@ categories:
 
 额外地,`Run()`方法接收一个枚举变量.它告诉intelliEssay应当以什么方式呈现检查结果.如果您使用命令行,您可以在命令行上看到整齐的intelliEssay错误输出.您可以将您的检查器编译为.dll或者.exe文件.
 
-7.注册您的检查器.打开intelliEssayCore\debug\bin\下的registeredComponent.xml文件.在<ArrayOfComponent></ArrayOfComponent>之间加入一个新的<Component>节点,就像其他节点一样.这个节点中的`Name`,`FilePath`和`Type`属性是至关重要的.完成后,就像这样.您要小心`xsi:type="CheckerComponent"`这一句.这告诉XML解析器如何解析这些元素.
+7.注册您的检查器.打开intelliEssayCore\debug\bin\下的registeredComponent.xml文件.在\<ArrayOfComponent\>\</ArrayOfComponent\>之间加入一个新的\<Component\>节点,就像其他节点一样.这个节点中的`Name`,`FilePath`和`Type`属性是至关重要的.完成后,就像这样.您要小心`xsi:type="CheckerComponent"`这一句.这告诉XML解析器如何解析这些元素.
 
 
 	\<?xml version="1.0"?\>
