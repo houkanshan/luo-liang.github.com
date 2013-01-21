@@ -14,6 +14,8 @@ categories:
 
 首先向新的intelliEssay Loader问好！如果你的CPU足够慢,就可以看到许多细微动画噢.
 
+<iframe src="https://skydrive.live.com/embed?cid=70CBFD8DD724CDEE&resid=70CBFD8DD724CDEE%21563&authkey=ACGHGQfy3F8tjuY" width="319" height="190" frameborder="0" scrolling="no"></iframe>
+
 # Building your Checker #
 首先您要建立您的Checker.建立Checker的过程和图形界面毫无关系.在向intellIEssay Core注册之前,您应当尽可能低确保您的检查器的正确性.
 
@@ -21,14 +23,16 @@ categories:
 
 2.接着,您需要添加对intelliEssayCore项目的引用.在大多数时候,您需要添加intelliEssayInterop和intelliSys.Agility项目.那里包含了许多方便您代码的方法.您可以选择另辟蹊径而不引用IntelliEssayInterop和intelliSys.Agility,但是您可能需要花许多时间实现已经实现的功能.
 
-3.更新命名空间.虽然有时这并不十分重要,但是一个良好的命名空间有助于区分检查器的归属.一般而言,intelliEssay.Checker.CHECKERNAMEChecker是一个不错的选择,也是我们遵守的规则.
+3.更新命名空间.虽然有时这并不十分重要,但是一个良好的命名空间有助于区分检查器的归属.一般而言,intelliEssay.Checker.`CHECKERNAMEChecker`是一个不错的选择,也是我们遵守的规则.
 
 4.写下您的实体类.您的实体类应当继承intelliEssay.Core.IEssayChecker以便被intelliEssay运行时载入.它看起来可能像这样：
+
 
 	class CHECKERNAMEChecker:intelliEssay.Core.IEssayChecker
 	{
 		
 	}
+
 
  现在,您可以将光标停留在`IEssayChecker`上,然后按下`CTRL`和`.`号.这时,您可以让Visual Studio为您补全接口的方法桩.
 
@@ -36,12 +40,14 @@ categories:
 
 6.调试您的Checker.我们推荐的方法是,您在您的检查器中进行本地测试.您可以新建一个类作为函数的入口,并测试您的检查器.之后,您需要新建一个`Task`类.这个类用于存储关于一次任务的所有内容.您需要向一个`Task`实例提供一些至关重要的参数,例如,`FilePath`,`TaskType`和`TaskSetting.StandardFilePath`.`FilePath`是要检查文件的路径,`TaskType`是指任务的类型,目前只能接受"nkub",意思是南开大学本科.最后一项指定标准格式文件的路径.您需要实例化一个您的检查器类型,然后将它加入到`Task`中.这一系列步骤看起来像这样:
 
+	
 	intelliEssay.Core.Task task=new Core.Task();
 	task.FilePath = str;
 	task.Initialize();
 	CHECKERNAMEChecker myChecker= new CHECKERNAMEChecker();
 	task.AddAChecker(myChecker);
 	task.Run(RunMode.Console);
+
 
 额外地,`Run()`方法接收一个枚举变量.它告诉intelliEssay应当以什么方式呈现检查结果.如果您使用命令行,您可以在命令行上看到整齐的intelliEssay错误输出.您可以将您的检查器编译为.dll或者.exe文件.
 
@@ -50,12 +56,12 @@ categories:
 
 	`<?xml version="1.0"?>
 	<ArrayOfComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	  <Component xsi:type="CheckerComponent">
+		<Component xsi:type="CheckerComponent">
 		<CheckerDescription>This is a default EssayChecker by intelliSys</CheckerDescription>
 		<Type>Checker</Type>
 		<Name>intelliEssayAlignmentChecker</Name>
 		<FilePath\>E:\Programs\ProjectEssayCompiler\TestDrive\intelliEssay\intelliEssayAlignmentChecker\bin\Debug\intelliEssayAlignmentChecker.exe</FilePath>
-	 </Component>
+		</Component>
 	</ArrayOfComponent>`
 
 7.运行IntelliEssay GUI Shell,您就可以在第三步中看到您的检查器了!
