@@ -28,6 +28,7 @@ categories:
 
 	class CHECKERNAMEChecker:intelliEssay.Core.IEssayChecker
 	{		
+
 	}
 
 
@@ -51,15 +52,15 @@ categories:
 7.注册您的检查器.打开intelliEssayCore/debug/bin/下的registeredComponent.xml文件.在`<ArrayOfComponent></ArrayOfComponent>`之间加入一个新的`<Component>`节点,就像其他节点一样.这个节点中的`Name`,`FilePath`和`Type`属性是至关重要的.完成后,就像这样.您要小心`xsi:type="CheckerComponent"`这一句.这告诉XML解析器如何解析这些元素.
 
 
-	&lt?xml version="1.0"?&gt
-	&ltArrayOfComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt
-		&ltComponent xsi:type="CheckerComponent"&gt
-		&ltCheckerDescription&ltThis is a default EssayChecker by intelliSys&lt/CheckerDescription&gt
-		&ltType&gtChecker&lt/Type&gt
-		&ltName&gtintelliEssayAlignmentChecker&lt/Name&gt
-		&ltFilePath&gtE:/Programs/ProjectEssayCompiler/TestDrive/intelliEssay/intelliEssayAlignmentChecker/bin/Debug/intelliEssayAlignmentChecker.exe&lt/FilePath&gt
-		&lt/Component&gt
-	&lt/ArrayOfComponent&gt
+	<?xml version="1.0"?>
+	<ArrayOfComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<Component xsi:type="CheckerComponent">
+		<CheckerDescription<This is a default EssayChecker by intelliSys</CheckerDescription>
+		<Type>Checker</Type>
+		<Name>intelliEssayAlignmentChecker</Name>
+		<FilePath>E:/Programs/ProjectEssayCompiler/TestDrive/intelliEssay/intelliEssayAlignmentChecker/bin/Debug/intelliEssayAlignmentChecker.exe</FilePath>
+		</Component>
+	</ArrayOfComponent>
 
 7.运行IntelliEssay GUI Shell,您就可以在第三步中看到您的检查器了!
 
