@@ -14,8 +14,6 @@ categories:
 
 首先向新的intelliEssay Loader问好！如果你的CPU足够慢,就可以看到许多细微动画噢.
 
-<iframe src="https://skydrive.live.com/embed?cid=70CBFD8DD724CDEE&resid=70CBFD8DD724CDEE%21563&authkey=ACGHGQfy3F8tjuY" width="319" height="190" frameborder="0" scrolling="no"></iframe>
-
 # Building your Checker #
 首先您要建立您的Checker.建立Checker的过程和图形界面毫无关系.在向intellIEssay Core注册之前,您应当尽可能低确保您的检查器的正确性.
 
