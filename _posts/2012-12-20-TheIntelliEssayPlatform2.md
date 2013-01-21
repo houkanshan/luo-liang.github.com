@@ -66,4 +66,8 @@ categories:
 
 7.运行IntelliEssay GUI Shell,您就可以在第三步中看到您的检查器了!
 
+
+<iframe src="https://skydrive.live.com/embed?cid=70CBFD8DD724CDEE&resid=70CBFD8DD724CDEE%21564&authkey=AAWVjxpx0JyodpM" width="319" height="190" frameborder="0" scrolling="no"></iframe>
+
+
 在下一节,将向您介绍如何具体编写一个检查器.以及intelliEssay提供哪些方法便利您的检查.
